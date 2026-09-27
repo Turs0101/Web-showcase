@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+/* Header section title*/
+h1 {
+    text-align: center;
+    color: white;
+}
+
+title {
+    color: white;
+}
+
+
+
+/* Body */
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+p {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+
+}
