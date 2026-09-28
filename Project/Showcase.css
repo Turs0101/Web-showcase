@@ -19,8 +19,8 @@
     display: flex;
     justify-content: space-between  ;   /*      */
     align-items: center;
-    background: #003e4f;
-    padding: 10px 20px;
+    background: #002f3b;
+    padding: 3px 50px;
 }
 
 /*  Sibling Class for Navbar  */
@@ -38,7 +38,7 @@
 }
 .nav-title{
     font-family: 'CeraCY-Bold',sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     color: #fff;
  
 
@@ -75,7 +75,6 @@
 }
 
 body{
-    background-color: #00273f;
-    background: radial-gradient(circle at center, #2b2d33 0%, #16171b 70%);
     min-height: 100vh;
+    background: radial-gradient(circle at 80% 90%, #147d9a 0%, #003e4f 45%, #001820 100%);
 }
