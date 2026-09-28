@@ -1,6 +1,81 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'CeraCY-Bold';
+    font-family: sans-serif;
+    src: url(fonts/CeraCY-Bold.woff2)format(woff2),
+        url(fonts/CeraCY-Bold.woff) format(woff);
+    
+        /*Goods Na ang font*/
+}
 
+/*Font Import*/
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box;
+}
+
+/*  Parent Class for Navbar   */
+.navbar{                                
+    display: flex;
+    justify-content: space-between  ;   /*      */
+    align-items: center;
+    background: #003e4f;
+    padding: 10px 20px;
+}
+
+/*  Sibling Class for Navbar  */
+.nav-logo{
+    height: 60px;
+    width: auto;
+}
+
+.nav-header{            
+    display: flex;
+    align-items: center;            /*      */
+    gap: 50px;                      /*      */
+
+  
+}
+.nav-title{
+    font-family: 'CeraCY-Bold',sans-serif;
+    font-size: 16px;
+    color: #fff;
+ 
+
+}
+.nav-links :hover{
+    transform: scale(1.1);
+    transition: ease-in 0.1s, ease-out 0.1s;
+    color: gold;
+}
+
+.nav-links{
+    font-family: 'CeraCY-Bold',sans-serif;
+    display: flex;
+    list-style-type: none;
+    margin:     1rem;
+    padding:    0;
+}
+
+.nav-links li a{
+    display: block;
+    padding: 10px 60px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/*   insert   */
+
+#Introduction {
+
+    justify-content: left;
+    font-family: sans-serif ;
+
+
+}
+
+body{
+    background-color: #00273f;
+    background: radial-gradient(circle at center, #2b2d33 0%, #16171b 70%);
+    min-height: 100vh;
 }
