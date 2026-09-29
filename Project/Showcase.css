@@ -1,46 +1,77 @@
 @font-face {
     font-family: 'CeraCY-Bold';
-    font-family: sans-serif;
     src: url(fonts/CeraCY-Bold.woff2)format(woff2),
         url(fonts/CeraCY-Bold.woff) format(woff);
-    
-        /*Goods Na ang font*/
+       
+}
+@font-face {
+    font-family: 'Horizon';
+    src: url(fonts/Horizon.woff2)format(woff2);
+}
+@font-face {
+    font-family: 'Horizon_outline';
+    src: url(fonts/Horizon_Outlined.woff2)format(woff2),
 }
 
+body{
+    background-size: cover;
+   /*background: #002f3b;*/
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background: radial-gradient(circle at 100% 100%, #147d9a 0%, #003e4f 40%, #001820 70%);  /* Radial gradient costumization */
+}
 /*Font Import*/
 * {
     margin:     0;
     padding:    0;
     box-sizing: border-box;
+    background-repeat: no-repeat;
 }
 
 /*  Parent Class for Navbar   */
-.navbar{                                
+.navbar{
+    margin:auto;
     display: flex;
     justify-content: space-between  ;   /*      */
     align-items: center;
     background: #002f3b;
-    padding: 3px 50px;
+    background-repeat: no-repeat;
+    padding: 3px 40px;
+    position: relative;
+    isolation: isolate;
+}
+
+.navbar::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/accent-navibar-texture.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.14;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /*  Sibling Class for Navbar  */
 .nav-logo{
-    height: 60px;
+    height: 80px;
     width: auto;
 }
 
-.nav-header{            
+.nav-header{
     display: flex;
     align-items: center;            /*      */
     gap: 50px;                      /*      */
 
-  
 }
 .nav-title{
+    position: relative;
     font-family: 'CeraCY-Bold',sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     color: #fff;
- 
+    font-family: 'Horizon';
 
 }
 .nav-links :hover{
@@ -50,31 +81,99 @@
 }
 
 .nav-links{
+
     font-family: 'CeraCY-Bold',sans-serif;
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     margin:     1rem;
     padding:    0;
 }
 
 .nav-links li a{
+    justify-content: end;
+    font-size: 15px;
+    flex-grow: 1;
+    flex-basis: 200;
+    display: flex;
+    flex-wrap: wrap;
     display: block;
-    padding: 10px 60px;
+    padding: 10px 30px;
     text-decoration: none;
     color: #fff;
 }
 
-/*   insert   */
+/*   Main   */
 
-#Introduction {
-
-    justify-content: left;
+main{
     font-family: sans-serif ;
+}
 
+.Header-container{
+    display: flex;
+    align-items: center;
+    gap: 2pc;
 
 }
 
-body{
-    min-height: 100vh;
-    background: radial-gradient(circle at 80% 90%, #147d9a 0%, #003e4f 45%, #001820 100%);
+.LOGO{
+    height: 400px;
+    width:  auto;
+    margin-left: 80px;
+    margin-top: 60px;
+
+
+}
+.TitleH{
+    margin-left: 1rem;
+    margin-top: 50px;
+    margin-right: 30%;
+    border-style: dotted;
+    border: #f5fdff;
+    border-radius: 5px;
+    color: #00e5ff;
+    font-family: 'Horizon';
+    font-size: 32px;
+}
+
+.outline1{
+    font-family: 'Horizon_outline';
+    font-size: inherit;
+}
+.outline2{
+    font-family: 'Horizon_outline';
+    font-size: inherit;
+}
+.Qoutation{
+    margin-top: 40rem;
+    margin-left: 24px;
+    font-family: 'Horizon';
+    font-size: 24px;
+    color: #00e5ff;
+}
+
+#Introduction{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: 'CeraCY-Bold';
+    color: white;
+}
+#sampletxt{
+    text-align: justify;
+    margin-top: 60px;
+    margin-left: 60px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+}
+
+
+/*3D container*/
+#container3d{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
 }
