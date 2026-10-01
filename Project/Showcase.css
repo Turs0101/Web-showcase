@@ -10,16 +10,23 @@
 }
 @font-face {
     font-family: 'Horizon_outline';
-    src: url(fonts/Horizon_Outlined.woff2)format(woff2),
+    src: url(fonts/Horizon_Outlined.woff2)format(woff2);
+}
+@media only screen and (min-width: 601px) and (max-width:768px){} 
+
+/* fix later */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
-body{
-    background-size: cover;
-   /*background: #002f3b;*/
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    background: radial-gradient(circle at 100% 100%, #147d9a 0%, #003e4f 40%, #001820 70%);  /* Radial gradient costumization */
-}
+  /* CSS rules apply when conditions are true */
+  .example {
+    background-color: lightblue;
+  }
+
+
 /*Font Import*/
 * {
     margin:     0;
@@ -27,6 +34,11 @@ body{
     box-sizing: border-box;
     background-repeat: no-repeat;
 }
+
+html {
+    overflow-x: hidden;
+}
+
 
 /*  Parent Class for Navbar   */
 .navbar{
@@ -36,7 +48,7 @@ body{
     align-items: center;
     background: #002f3b;
     background-repeat: no-repeat;
-    padding: 3px 40px;
+    padding: 0.5px 0.5px;
     position: relative;
     isolation: isolate;
 }
@@ -52,24 +64,26 @@ body{
     opacity: 0.14;
     z-index: -1;
     pointer-events: none;
+    
 }
 
 /*  Sibling Class for Navbar  */
 .nav-logo{
-    height: 80px;
+    height: 60px;
+    margin-left: 20px;
     width: auto;
 }
 
 .nav-header{
     display: flex;
     align-items: center;            /*      */
-    gap: 50px;                      /*      */
+    gap: 10px;                      /*      */
 
 }
 .nav-title{
     position: relative;
     font-family: 'CeraCY-Bold',sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
     font-family: 'Horizon';
 
@@ -100,20 +114,62 @@ body{
     display: block;
     padding: 10px 30px;
     text-decoration: none;
-    color: #fff;
+    color: #fff
 }
 
-/*   Main   */
+                                            /*   Main   */
+
+body{
+    background-size: cover;
+    background-color: #001e27;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: clip;
+    max-width: 100%;
+                                        /*background: radial-gradient(circle at right bottom,  0%, #003e4f 4%, #05070a 100%);*/
+}
 
 main{
     font-family: sans-serif ;
+    flex-wrap: wrap ;
 }
+
+.RadialLight1 {
+    width: 70vw;
+    height: 70vh;
+    background: radial-gradient(ellipse at center, #00273f 0%, transparent 75%);
+    border-radius: 20%;
+
+    position:       absolute;                      /* Takes it out of the regular document layout flow */
+    z-index:        -1;                            /* Forces the element to layer behind text and logo */
+    top:            30%;                           /* Centers the light vertically inside the header */
+    left:           7%;                           /* Shifts the light horizontally to center under logo/text */
+    transform:      translate(-50%, -50%);         /* Ensures pixel-perfect alignment anchoring */
+    pointer-events: none;                          /* Prevents the glow from interfering with mouse clicks */
+    
+}
+
+.RadialLight2 {
+width: 70vw;
+height: 70vh;
+background: radial-gradient(ellipse at center, #003e4f 0%, transparent 75%);
+border-radius: 20%;
+position:       absolute;                      
+z-index:        -1;                            
+top:            80%;                           
+left:           90%;                           
+transform:      translate(-50%, -50%);         
+pointer-events: none;
+}
+    
+
+    
 
 .Header-container{
     display: flex;
     align-items: center;
     gap: 2pc;
-
+    position: relative;     /*makes the layer content*/
 }
 
 .LOGO{
@@ -121,9 +177,8 @@ main{
     width:  auto;
     margin-left: 80px;
     margin-top: 60px;
-
-
 }
+
 .TitleH{
     margin-left: 1rem;
     margin-top: 50px;
@@ -136,17 +191,15 @@ main{
     font-size: 32px;
 }
 
-.outline1{
+.outline1, .outline2{
     font-family: 'Horizon_outline';
     font-size: inherit;
 }
-.outline2{
-    font-family: 'Horizon_outline';
-    font-size: inherit;
-}
+
 .Qoutation{
-    margin-top: 40rem;
-    margin-left: 24px;
+    position: relative;
+    top: 50%;
+    left: 100%;
     font-family: 'Horizon';
     font-size: 24px;
     color: #00e5ff;
@@ -162,18 +215,138 @@ main{
 }
 #sampletxt{
     text-align: justify;
-    margin-top: 60px;
-    margin-left: 60px;
-    font-size: 20px;
+    font-size: 18px;
+    position: relative;
+    top:    40px;
+    left:   150px; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:white;
 }
 
 
-/*3D container*/
-#container3d{
-    position: fixed;
-    inset: 0;
+.projects{
+    font-size: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+    
+    font-family: 'CeraCY-Bold';
+    padding: 50px;
+    padding-left: 100px;
+    color: #fff;
+    background-color: #004d61;
+    margin: 0; 
+    
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.Documentation{
+    position: relative;
+    margin-top: 10%;
+    height: 60rem;
+    width: 50rem;
+    border:2px solid;
+    display: flex;
+    font-family: 'CeraCY-Bold';
+    padding: 100px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #004d61;
+    flex-direction: column;
+    overflow: hidden;
+h{
+    padding-top:30px;
+    font-size: 50px;
+}
+
+p{
+    font-size: 20px;
+    }
+
+}
+.Documentation::after{
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    width: 102%;
+    height: 102%;
+    background: conic-gradient(from var(--angle), transparent, blue, transparent);
+    z-index: -1;
+    border-radius: 22px;
+    animation: spin 3s linear infinite;
+}
+
+
+.doc_thumbnail{
+    padding:10%;
+    background-color: #fff;
+    height: 30rem;
+    width: auto;
+}
+
+.thesis{
+   margin-top: 10%;
+    width: 50rem;
+    border:2px solid;
+    display: flex;
+    font-family: 'CeraCY-Bold';
+    padding: 100px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #004d61;
+   
+    flex-direction: column;
+    
+h{  
+    padding-top:30px;
+    font-size: 50px;
+}
+
+p{
+    font-size: 20px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*3D container
+#container3d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
     z-index: 0;
     pointer-events: none;
+    overflow: hidden;
 }
+
+#container3d canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #container3d {
+        width: 100vw;
+        opacity: 0.4;w
+    }
+}                           */
