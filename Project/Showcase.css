@@ -41,6 +41,7 @@ html {
 /*  Parent Class for Navbar   */
 .navbar{
     margin:auto;
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between  ;   /*      */
     align-items: center;
@@ -123,7 +124,6 @@ body{
     overflow-x: clip;
     
 }
-
 /* ---------- Layout basics ---------- */
 .hero .container, 
 .highlights .container{
@@ -318,10 +318,9 @@ main{
     display: flex;
     flex-wrap: wrap;
     font-family: 'CeraCY-Bold';
-    padding: 40px;
+    padding: 50px;
     color: #fff;
-   
-    margin: 0;
+    margin-top: 1rem;
     
     
 }
@@ -331,6 +330,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+
 }
 .Documentation{
     margin: 0;
@@ -358,40 +358,73 @@ p{  justify-content: left;
 
 }
 .doc_thumbnail{
+    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #fff;
     border-radius: 20px;
-    width: 15rem;
+    width: 20.5rem;
     height: 15rem;
 }
 
-.thesis{
+.faculty{
     margin:0;
-    border-radius: 20px;
-    height: 30rem;
-    width: 25rem;
+    border-radius: 50px;
+    height: 38.5rem;
+    width: 22rem;
     display: flex;
     flex-direction: column;
     color: #00e5ff;
-    padding: 2rem;
-    border: 1px #00e5ff solid;
+    padding: 1%;
     background: #012a35;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 h{  
     justify-content: left;
     font-weight: bold;
-    padding-top:30px;
+    padding-top:5px;
+    margin-left: 20px;
     font-size: 30px;
 }
 
-p{  
-    justify-content: left;
+p{  justify-content: left;
     color: #fff;
     font-size: 15px;
+    margin: 20px;
+    margin: bottom 2rem;
     }
-
+.btn{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 20px;
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 10rem;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
 }
 
+}
+.btn:hover{
+    justify-content: left;
+    transition: ease-in .5s;
+    width: 15rem;
+    margin-right: 100px ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 20px;
+    background-color: #ffff;
+    color: black;
+
+}
+.fac_pic{
+    margin: auto;
+    margin-bottom: 25px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 20rem;
+    height: 21rem;
+}
 
 
 
