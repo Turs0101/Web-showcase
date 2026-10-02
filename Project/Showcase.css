@@ -120,90 +120,182 @@ html {
                                             /*   Main   */
 
 body{
-    background-size: cover;
-    background-color: #001e27;
+ background-color: #001e27;
     background-repeat: no-repeat;
-    min-height: 100vh;
     overflow-x: clip;
-    max-width: 100%;
-                                        /*background: radial-gradient(circle at right bottom,  0%, #003e4f 4%, #05070a 100%);*/
+    
 }
+
+
+
+                                        
 
 main{
-    font-family: sans-serif ;
-    flex-wrap: wrap ;
-}
-
-.RadialLight1 {
-    width: 70vw;
-    height: 70vh;
-    background: radial-gradient(ellipse at center, #00273f 0%, transparent 75%);
-    border-radius: 20%;
-
-    position:       absolute;                      /* Takes it out of the regular document layout flow */
-    z-index:        -1;                            /* Forces the element to layer behind text and logo */
-    top:            30%;                           /* Centers the light vertically inside the header */
-    left:           7%;                           /* Shifts the light horizontally to center under logo/text */
-    transform:      translate(-50%, -50%);         /* Ensures pixel-perfect alignment anchoring */
-    pointer-events: none;                          /* Prevents the glow from interfering with mouse clicks */
+    font-family:    sans-serif;
+    flex-wrap:      wrap ;
+    min-height:     800px;
     
+   
 }
 
-.RadialLight2 {
-width: 70vw;
-height: 70vh;
-background: radial-gradient(ellipse at center, #003e4f 0%, transparent 75%);
-border-radius: 20%;
-position:       absolute;                      
-z-index:        -1;                            
-top:            80%;                           
-left:           90%;                           
-transform:      translate(-50%, -50%);         
-pointer-events: none;
-}
+
     
 
     
+
+/* ---------- Layout basics ---------- */
+.hero .container, 
+.highlights .container{
+    max-width: 1600px;
+    margin-inline: auto;
+    padding: 0 4vw;
+}
+
+/* ---------- Navbar floats over the hero ---------- */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin: 0;
+}
+
+/* ---------- Hero: background picture + dark overlay ---------- */
+.hero{
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 10rem;          /* top clears the navbar, bottom leaves room for the overlap */
+    background: url("images/hero.jpg") center / cover no-repeat;
+    /* background-attachment: fixed;   uncomment for the "picture stays still" effect */
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 30, 39, .65), rgba(0, 30, 39, .9));
+}
+
+.hero .container{
+    position: relative;             /* keeps content above the overlay */
+    z-index: 1;
+}
 
 .Header-container{
     display: flex;
     align-items: center;
-    gap: 2pc;
-    position: relative;     /*makes the layer content*/
+    gap: clamp(1rem, 4vw, 4rem);
 }
 
 .LOGO{
-    height: 400px;
-    width:  auto;
-    margin-left: 80px;
-    margin-top: 60px;
+    height: clamp(15rem, 10vw, 20rem);
+    width: auto;
+    position: relative;
+    top: 100%;
+    
 }
 
 .TitleH{
-    margin-left: 1rem;
-    margin-top: 50px;
-    margin-right: 30%;
-    border-style: dotted;
-    border: #f5fdff;
-    border-radius: 5px;
+    font-family: 'Horizon', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 2.5rem);
     color: #00e5ff;
-    font-family: 'Horizon';
-    font-size: 32px;
-}
-
-.outline1, .outline2{
-    font-family: 'Horizon_outline';
-    font-size: inherit;
 }
 
 .Qoutation{
-    position: relative;
-    top: 50%;
-    left: 100%;
-    font-family: 'Horizon';
-    font-size: 24px;
+    font-family: 'Horizon', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.8rem);
     color: #00e5ff;
+    margin-top: 1.5rem;
+    position: relative;
 }
+
+.outline1, .outline2{
+    font-family: 'Horizon_outline', sans-serif;
+    font-size: inherit;
+}
+
+/* ---------- Highlight boxes overlapping the hero ---------- */
+.highlights{
+    position: relative;
+    z-index: 2;
+    margin-top: -7rem;              /* the overlap: pulls the row up over the hero */
+    margin-bottom: 4rem;
+}
+
+.highlights-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));  /* equal columns, any number of boxes */
+    gap: 2rem;
+    align-items: stretch;           /* every box is as tall as the tallest one */
+}
+
+.highlight{
+    min-width: 0;                   /* lets a box shrink instead of stretching the grid */
+    overflow-wrap: anywhere;        /* long unbroken text wraps instead of pushing sideways */
+    background: #012a35;
+    border: 1px solid rgba(0, 229, 255, .25);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+.highlight h3,
+.highlight h4{
+    font-family: 'CeraCY-Bold', sans-serif;
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem);   /* same title size in every box */
+    color: #00e5ff;
+    margin-bottom: 1rem;
+}
+
+.highlight p{
+    font-size: .95rem;
+    line-height: 1.5;
+    color: #b9d4db;
+}
+
+/* the featured box: same size as the others, only the colors differ */
+.highlight--main{
+    background: #00e5ff;
+    color: #001e27;
+    text-align: center;             /* matches the others; change to left if you prefer */
+}
+
+.highlight--main h3,
+.highlight--main h4{
+    color: #001e27;
+}
+
+.highlight--main p{
+    color: #003e4f;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px){
+    .Header-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .highlights-row{
+        grid-template-columns: 1fr 1fr;
+    }
+    .highlight--main{
+        grid-column: 1 / -1;        /* featured box takes a full row */
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 560px){
+    .highlights-row{
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 #Introduction{
     display: flex;
@@ -223,6 +315,11 @@ pointer-events: none;
     color:white;
 }
 
+.container{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 0 5vw;
+}
 
 .projects{
     font-size: 50px;
@@ -230,7 +327,7 @@ pointer-events: none;
     justify-content:center;
     align-items: center;
     position: relative;
-    top: 200px;
+    top: 1.6rem;
     
     font-family: 'CeraCY-Bold';
     padding: 50px;
@@ -246,7 +343,6 @@ pointer-events: none;
     justify-content: space-around;
 }
 .Documentation{
-    position: relative;
     margin-top: 10%;
     height: 60rem;
     width: 50rem;
@@ -254,12 +350,15 @@ pointer-events: none;
     display: flex;
     font-family: 'CeraCY-Bold';
     padding: 100px;
+    position: relative;
+    top: 50rem;
+    left: 30rem;
     color: #fff;
     border-radius: 20px;
     background-color: #004d61;
     flex-direction: column;
     overflow: hidden;
-h{
+h1{
     padding-top:30px;
     font-size: 50px;
 }
@@ -298,6 +397,9 @@ p{
     display: flex;
     font-family: 'CeraCY-Bold';
     padding: 100px;
+    position: relative;
+    top: 90%;
+    left: -50%;
     color: #fff;
     border-radius: 20px;
     background-color: #004d61;
