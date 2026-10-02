@@ -38,8 +38,6 @@
 html {
     overflow-x: hidden;
 }
-
-
 /*  Parent Class for Navbar   */
 .navbar{
     margin:auto;
@@ -125,11 +123,6 @@ body{
     overflow-x: clip;
     
 }
-
-
-
-                                        
-
 main{
     font-family:    sans-serif;
     flex-wrap:      wrap ;
@@ -328,93 +321,80 @@ main{
     align-items: center;
     position: relative;
     top: 1.6rem;
-    
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'CeraCY-Bold';
-    padding: 50px;
-    padding-left: 100px;
+    padding: 40px;
     color: #fff;
     background-color: #004d61;
-    margin: 0; 
+    margin: 0;
+    border: 1px #004d61 solid;
     
 }
 .content{
+    margin-top: 5rem;
+    justify-content:center ;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 3rem;
 }
 .Documentation{
-    margin-top: 10%;
-    height: 60rem;
-    width: 50rem;
-    border:2px solid;
-    display: flex;
-    font-family: 'CeraCY-Bold';
-    padding: 100px;
-    position: relative;
-    top: 50rem;
-    left: 30rem;
-    color: #fff;
+    margin: 0;
     border-radius: 20px;
-    background-color: #004d61;
+    height: 30rem;
+    width: 25rem;
+    display: flex;
     flex-direction: column;
-    overflow: hidden;
-h1{
+    color: #00e5ff;
+    padding: 2rem;
+    border: 1px #00e5ff solid;
+    background: #012a35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+h{  
+    justify-content: left;
+    font-weight: bold;
     padding-top:30px;
-    font-size: 50px;
+    font-size: 30px;
 }
 
-p{
-    font-size: 20px;
+p{  justify-content: left;
+    color: #fff;
+    font-size: 15px;
     }
 
 }
-.Documentation::after{
-    content: '';
-    position: absolute;
-    height: 50%;
-    width: 50%;
-    transform: translate(-50%, -50%);
-    width: 102%;
-    height: 102%;
-    background: conic-gradient(from var(--angle), transparent, blue, transparent);
-    z-index: -1;
-    border-radius: 22px;
-    animation: spin 3s linear infinite;
-}
-
-
 .doc_thumbnail{
-    padding:10%;
+    justify-content: center;
     background-color: #fff;
-    height: 30rem;
-    width: auto;
+    border-radius: 20px;
+    width: 15rem;
+    height: 15rem;
 }
 
 .thesis{
-   margin-top: 10%;
-    width: 50rem;
-    border:2px solid;
-    display: flex;
-    font-family: 'CeraCY-Bold';
-    padding: 100px;
-    position: relative;
-    top: 90%;
-    left: -50%;
-    color: #fff;
+    margin:0;
     border-radius: 20px;
-    background-color: #004d61;
-   
+    height: 30rem;
+    width: 25rem;
+    display: flex;
     flex-direction: column;
-    
+    color: #00e5ff;
+    padding: 2rem;
+    border: 1px #00e5ff solid;
+    background: #012a35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 h{  
+    justify-content: left;
+    font-weight: bold;
     padding-top:30px;
-    font-size: 50px;
+    font-size: 30px;
 }
 
-p{
-    font-size: 20px;
+p{  
+    justify-content: left;
+    color: #fff;
+    font-size: 15px;
     }
-
 
 }
 
