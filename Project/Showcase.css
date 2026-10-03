@@ -88,9 +88,13 @@ html {
 
 }
 .nav-links :hover{
-    transform: scale(1.1);
-    transition: ease-in 0.1s, ease-out 0.1s;
-    color: gold;
+    font-weight: bold;
+    scale: 1.1;
+    transition: ease-in 0.5s, ease-out 0.5s;
+    color: black;
+    background-color: #00e5ff;
+    border-radius: 20px;
+
 }
 
 .nav-links{
@@ -115,7 +119,6 @@ html {
     text-decoration: none;
     color: #fff
 }
-
                                             /*   Main   */
 
 body{
@@ -368,15 +371,19 @@ p{  justify-content: left;
     height: 15rem;
 }
 
+
+
+
+
 .faculty{
-    margin:0;
+    margin:10px;
     border-radius: 50px;
     height: 38.5rem;
     width: 22rem;
     display: flex;
     flex-direction: column;
     color: #00e5ff;
-    padding: 1%;
+    padding: 1rem;
     background: #012a35;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 h{  
@@ -394,6 +401,7 @@ p{  justify-content: left;
     margin: bottom 2rem;
     }
 .btn{
+    position: relative;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
     font-size: 20px;
     background-color: blue;
@@ -401,15 +409,13 @@ p{  justify-content: left;
     padding: 10px;
     border-radius: 20px;
     width: 10rem;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
+    margin-left: 10rem;
+    border-style: hidden;
 }
 
 }
 .btn:hover{
-    justify-content: left;
     transition: ease-in .5s;
-    width: 15rem;
     margin-right: 100px ;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
     font-size: 20px;
@@ -418,12 +424,27 @@ p{  justify-content: left;
 
 }
 .fac_pic{
-    margin: auto;
-    margin-bottom: 25px;
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-color: #fff;
     border-radius: 40px;
     width: 20rem;
     height: 21rem;
+}
+
+
+.footer{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #092128;
+    color:#fff;
+    height: 10rem;
 }
 
 
