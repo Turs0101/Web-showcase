@@ -2,7 +2,7 @@
     font-family: 'CeraCY-Bold';
     src: url(fonts/CeraCY-Bold.woff2)format(woff2),
         url(fonts/CeraCY-Bold.woff) format(woff);
-       
+
 }
 @font-face {
     font-family: 'Horizon';
@@ -12,9 +12,9 @@
     font-family: 'Horizon_outline';
     src: url(fonts/Horizon_Outlined.woff2)format(woff2);
 }
-@media only screen and (min-width: 601px) and (max-width:768px){} 
+@media only screen and (min-width: 601px) and (max-width:768px){
 
-/* fix later */
+} 
 @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
@@ -190,7 +190,7 @@ body{
     color: #00e5ff;
 }
 
-.Qoutation{
+.Qtation{
     font-family: 'Horizon', sans-serif;
     font-size: clamp(12px, 1.0vw, 1.0rem);
     color: #00e5ff;
@@ -339,7 +339,7 @@ main{
 .Documentation{
     margin: 0;
     border-radius: 20px;
-    height: 30rem;
+    min-height: 30rem;
     width: 25rem;
     display: flex;
     flex-direction: column;
@@ -348,6 +348,8 @@ main{
     border: 1px #00e5ff solid;
     background: #012a35;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 h{  
     justify-content: left;
     font-weight: bold;
@@ -359,6 +361,12 @@ p{  justify-content: left;
     color: #fff;
     font-size: 15px;
     }
+
+}
+.Documentation:hover{
+    box-shadow: 0 0 8px 2px rgba(0, 229, 255, 0.6),
+                0 0 20px 6px rgba(0, 229, 255, 0.3);
+    transform: translateY(-4px);
 
 }
 .doc_thumbnail{
@@ -374,12 +382,87 @@ p{  justify-content: left;
 
 
 
-
+@keyframes spin{
+    to{ --angle: 360deg; }
+}
 
 .faculty{
     margin:10px;
     border-radius: 50px;
-    height: 38.5rem;
+    height: 34.5rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    color: #00e5ff;
+    padding: 1rem;
+    background: #012a35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+h{  
+    justify-content: left;
+    font-weight: bold;
+    padding-top:5px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+p{  justify-content: left;
+    color: #fff;
+    font-size: 15px;
+    margin: 20px;
+    margin: bottom 2rem;
+    }
+    
+.btn{
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 20px;
+    background-color: #001e27;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 10rem;
+    margin-left: 10rem;
+    border: none;
+    z-index: 0;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: -2;
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), transparent 75%, #00e5ff 88%, transparent 100%);
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: #001e27;
+}
+
+.btn:hover::before{
+    animation: spin 2s linear infinite;
+}
+
+}
+.fac_pic{
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 20rem;
+    height: 21rem;
+
+}
+.team{
+    margin:10px;
+    border-radius: 50px;
+    min-height: 33rem;
     width: 22rem;
     display: flex;
     flex-direction: column;
@@ -413,28 +496,29 @@ p{  justify-content: left;
     margin-left: 10rem;
     border-style: hidden;
 }
-
-}
-.btn:hover{
-    transition: ease-in .5s;
-    margin-right: 100px ;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
-    font-size: 20px;
-    background-color: #ffff;
-    color: black;
-
-}
-.fac_pic{
-    margin:auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: #fff;
-    border-radius: 40px;
-    width: 20rem;
-    height: 21rem;
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: auto;
+    margin-bottom: 0.1rem;
+    padding-top: 1rem;
 }
 
+.social-links a{
+    color: #001e27;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    filter: drop-shadow(0 0 4px rgba(0, 229, 255, 0.6));
+}
 
+.social-links a:hover{
+    color: #fff;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 7px rgba(0, 229, 255, 0.9));
+}
+
+}
 .footer{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -447,9 +531,6 @@ p{  justify-content: left;
     color:#fff;
     height: 10rem;
 }
-
-
-
 
 
 
