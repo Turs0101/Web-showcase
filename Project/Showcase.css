@@ -205,7 +205,7 @@ body{
 .highlights{
     position: relative;
     z-index: 2;
-    margin-top: -20rem;              /* the overlap: pulls the row up over the hero */
+    margin-top: -6rem;              /* the overlap: pulls the row up over the hero */
     margin-bottom: 4rem;
 }
 
