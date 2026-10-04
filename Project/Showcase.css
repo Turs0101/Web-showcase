@@ -37,6 +37,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /*  Parent Class for Navbar   */
 .navbar{
@@ -130,7 +131,7 @@ body{
 /* ---------- Layout basics ---------- */
 .hero .container, 
 .highlights .container{
-    max-width: 1600px;
+    max-width: 1200px;
     margin-inline: auto;
     padding: 0 4vw;
 }
@@ -148,10 +149,10 @@ body{
 /* ---------- Hero: background picture + dark overlay ---------- */
 .hero{
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
-    padding: 6rem 0 10rem;          /* top clears the navbar, bottom leaves room for the overlap */
+    padding: 6rem 0 9rem;          /* top clears the navbar, bottom leaves room for the overlap */
     background: url("images/BGHero.png") center / cover no-repeat;
     background-attachment: fixed;   /*uncomment for the "picture stays still" effect */
 }
@@ -172,10 +173,11 @@ body{
     display: flex;
     align-items: center;
     gap: clamp 10rem;
+    margin-top: 4rem;
 }
 
 .LOGO{
-    height: clamp(30rem, 240vw, 20rem);
+    height: clamp(20rem, 240vw, 20rem);
     width: auto;
     position: relative;
     top: 100%;
@@ -316,23 +318,22 @@ main{
     display: flex;
     justify-content:center;
     align-items: center;
-    position: relative;
-    top: 0.2rem;
+    position: static;
     display: flex;
     flex-wrap: wrap;
     font-family: 'CeraCY-Bold';
-    padding: 50px;
+    padding: 4rem 0;
     color: #fff;
-    margin-top: 1rem;
+    margin-top: 0;
     
     
 }
 .content{
-    margin-top: 5rem;
+    margin-top: 2rem;
     justify-content:center ;
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1rem;
 
 }
 .Documentation{
