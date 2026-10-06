@@ -337,7 +337,7 @@ main{
 
 }
 .Documentation{
-    margin: 0;
+    margin:2rem;
     border-radius: 20px;
     min-height: 30rem;
     width: min(25rem, 100%);
@@ -353,7 +353,7 @@ main{
 h{  
     justify-content: left;
     font-weight: bold;
-    padding-top:30px;
+    padding-top:50px;
     font-size: 30px;
 }
 
@@ -379,6 +379,7 @@ p{  justify-content: left;
     width: 100%;
     height: auto;
     aspect-ratio: 4/3;
+    margin-bottom: 1rem;
 }
 
 
@@ -390,7 +391,7 @@ p{  justify-content: left;
 .faculty{
     margin:10px;
     border-radius: 50px;
-    height: 34.5rem;
+    height: 33.5rem;
     width: 22rem;
     display: flex;
     flex-direction: column;
@@ -399,14 +400,15 @@ p{  justify-content: left;
     background: #012a35;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 h{  
-    justify-content: left;
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     padding-top:5px;
-    margin-left: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-p{  justify-content: left;
+p{  display: flex;
+    justify-content: center;
     color: #fff;
     font-size: 15px;
     margin: 20px;
