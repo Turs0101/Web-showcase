@@ -340,7 +340,7 @@ main{
     margin: 0;
     border-radius: 20px;
     min-height: 30rem;
-    width: 25rem;
+    width: min(25rem, 100%);
     display: flex;
     flex-direction: column;
     color: #00e5ff;
@@ -376,8 +376,9 @@ p{  justify-content: left;
     align-items: center;
     background-color: #fff;
     border-radius: 20px;
-    width: 20.5rem;
-    height: 15rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
 }
 
 
